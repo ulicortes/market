@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/styleprod.css">
+    <link rel="stylesheet" href="../CSS/bootstrap.css">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <nav id="divConteiner1">
+            <a href="ecom.html"><img src="../IMG/logoppal.jpg" width="50" height="50" alt="" loading="lazy"></a>
+            <button hidden id="new">AGREGAR NUEVO ITEM</button>
+            <!-- <button hidden id="edi">EDITAR ITEM</button> -->
+            <!-- <button hidden id="bor">BORRAR ITEM</button> -->
+            <button hidden id="close">CERRAR SESION</button>
+        </nav>
+    </div>
+    <div id="content1">
+        <div>
+            <ul id="ingreso">
+                <!-- <h3>INGRESO</h3> -->
+                <input id="usuario" autocomplete="off">
+                <p>USUARIO</p>
+                <input id="contraseña" autocomplete="off">
+                <p>CONTRASEÑA</p>
+                <button id="log">INGRESAR</button>
+            </ul>
+        </div>
+        <div id="div-prod1" class="flex">
+            <table id="tabla">
+                <thead id="thead1">
+                </thead>
+                <tbody id="tbody1">
+                </tbody>
+            </table>
+        </div>
+        <div id="add-prod">
+            <input type="text"id="producto" placeholder="Producto">
+            <input type="text"id="precio" placeholder="Precio">
+            <input type="text"id="cantidad" placeholder="Cantidad">
+            <input type="text"id="stock" placeholder="Stock">
+            <button id="enviar">AGREGAR</button>
+            <button id="back">VOLVER</button>
+        </div>
+    </div>
+    <script type="text/javascript" src="../JS/getters.js"></script>
+    <!-- <script type="text/javascript" src="../JS/things.js"></script> -->
+    <script type="text/javascript" src="../JS/products.js"></script>
+</body>
+</html>

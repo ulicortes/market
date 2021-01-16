@@ -1,0 +1,270 @@
+{
+    "id": "1";
+    "producto": "Azucar",
+    "precio": "$40",
+    "cantidad": "1 kg"
+},
+{
+    "id": "2",
+    "producto": "Huevos",
+    "precio": "$120",
+    "cantidad": "12 unidades"
+},
+{
+    "id": "3",
+    "producto": "Crema de leche",
+    "precio": "$60",
+    "cantidad": "500 cc"
+},
+{
+    "id": "4",
+    "producto": "Chocolate",
+    "precio": "$250",
+    "cantidad": "11 barras"
+},
+{
+    "id": "5",
+    "producto": "Leche",
+    "precio": "$35",
+    "cantidad": "1 litro"
+},
+{
+    "id": "6",
+    "producto": "Escencia de vainilla",
+    "precio": "$100",
+    "cantidad": "100 cc"
+},
+{
+    "id": "7",
+    "producto": "Harina",
+    "precio": "$55",
+    "cantidad": "1 kg"
+},
+{
+    "id": "8",
+    "producto": "Manteca",
+    "precio": "$85",
+    "cantidad": "200 gr"
+},
+{
+    "id": "9",
+    "producto": "Dulce de batata",
+    "precio": "$70",
+    "cantidad": "500 gr"
+},
+{
+    "id": "10",
+    "producto": "Dulce de membrillo",
+    "precio": "$58",
+    "cantidad": "500 gr"
+},
+{
+    "id": "11",
+    "producto": "Dulce de leche",
+    "precio": "$80",
+    "cantidad": "250 gr"
+},
+{
+    "id": "12",
+    "producto": "Maizena",
+    "precio": "$30",
+    "cantidad": "100 gr"
+},
+{
+    "id": "13",
+    "producto": "Leche condensada",
+    "precio": "$190",
+    "cantidad": "400 gr"
+},
+{
+    "id": "14",
+    "producto": "Sal",
+    "precio": "$60",
+    "cantidad": "150 gr"
+},
+{
+    "id": "15",
+    "producto": "Vainillas",
+    "precio": "$80",
+    "cantidad": "24 unidades"
+},
+{
+    "id": "16",
+    "producto": "Queso mascarpone",
+    "precio": "$400",
+    "cantidad": "400 gr"
+},
+{
+    "id": "17",
+    "producto": "Cafe",
+    "precio": "$120",
+    "cantidad": "500 gr"
+},
+{
+    "id": "18",
+    "producto": "Chocolinas",
+    "precio": "$40",
+    "cantidad": "1 paquete (36 galletitas)"
+},
+{
+    "id": "";
+    "producto": "",
+    "precio": "",
+    "cantidad": ""
+},
+{
+    "id": "";
+    "producto": "",
+    "precio": "",
+    "cantidad": ""
+},
+{
+    "id": "";
+    "producto": "",
+    "precio": "",
+    "cantidad": ""
+},
+{
+    "id": "";
+    "producto": "",
+    "precio": "",
+    "cantidad": ""
+},
+{
+    "id": "";
+    "producto": "",
+    "precio": "",
+    "cantidad": ""
+},
+
+////////////////////////////////////////////////////////////////////////
+hew@gmail.com
+////////////////////////////////////////////////////////////////////////
+[
+  {
+    "id": "1",
+    "producto": "Azucar",
+    "precio": "$40",
+    "cantidad": "1 kg",
+    "stock": "10"
+  },
+  {
+    "id": "2",
+    "producto": "Huevos",
+    "precio": "$120",
+    "cantidad": "12 unidades",
+    "stock": "100"
+  },
+  {
+    "id": "3",
+    "producto": "Crema de leche",
+    "precio": "$60",
+    "cantidad": "500 cc",
+    "stock": "20"
+  },
+  {
+    "id": "4",
+    "producto": "Chocolate",
+    "precio": "$250",
+    "cantidad": "11 barras",
+    "stock": "7"
+  },
+  {
+    "id": "5",
+    "producto": "Leche",
+    "precio": "$35",
+    "cantidad": "1 litro",
+    "stock": "10"
+  },
+  {
+    "id": "6",
+    "producto": "Escencia de vainilla",
+    "precio": "$100",
+    "cantidad": "100 cc",
+    "stock": "5"
+  },
+  {
+    "id": "7",
+    "producto": "Harina",
+    "precio": "$55",
+    "cantidad": "1 kg",
+    "stock": "30"
+  },
+  {
+    "id": "8",
+    "producto": "Manteca",
+    "precio": "$85",
+    "cantidad": "200 gr",
+    "stock": "15"
+  },
+  {
+    "id": "9",
+    "producto": "Dulce de batata",
+    "precio": "$70",
+    "cantidad": "500 gr",
+    "stock": "9"
+  },
+  {
+    "id": "10",
+    "producto": "Dulce de membrillo",
+    "precio": "$58",
+    "cantidad": "500 gr",
+    "stock": "9"
+  },
+  {
+    "id": "11",
+    "producto": "Dulce de leche",
+    "precio": "$80",
+    "cantidad": "250 gr",
+    "stock": "18"
+  },
+  {
+    "id": "12",
+    "producto": "Maizena",
+    "precio": "$30",
+    "cantidad": "100 gr",
+    "stock": "6"
+  },
+  {
+    "id": "13",
+    "producto": "Leche condensada",
+    "precio": "$190",
+    "cantidad": "400 gr",
+    "stock": "5"
+  },
+  {
+    "id": "14",
+    "producto": "Sal",
+    "precio": "$60",
+    "cantidad": "150 gr",
+    "stock": "25"
+  },
+  {
+    "id": "15",
+    "producto": "Vainillas",
+    "precio": "$80",
+    "cantidad": "24 unidades",
+    "stock": "40"
+  },
+  {
+    "id": "16",
+    "producto": "Queso mascarpone",
+    "precio": "$400",
+    "cantidad": "400 gr",
+    "stock": "10"
+  },
+  {
+    "id": "17",
+    "producto": "Cafe",
+    "precio": "$120",
+    "cantidad": "500 gr",
+    "stock": "30"
+  },
+  {
+    "id": "18",
+    "producto": "Chocolinas",
+    "precio": "$40",
+    "cantidad": "1 paquete (36 galletitas)",
+    "stock": "70"
+  }
+]

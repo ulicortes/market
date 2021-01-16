@@ -1,0 +1,43 @@
+#content1 {
+    background-color: rgb(234, 255, 112);
+    height: 100%;
+    padding-bottom: 4%;
+    font-family: 'Ubuntu', sans-serif;
+}
+body div nav {
+    background-color: #ffb0f2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 5px 0px 5px;
+    font-family: 'Ubuntu', sans-serif;
+}
+body div div {
+    margin-left: 400px;
+}
+body div div ul {
+    padding: 200px 100px 185px 100px;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+}
+.borders {
+    background-color: #ddfeff;
+    border-color: black;
+    border-style: solid;
+    width: fit-content;
+    padding: 7px;
+}
+.hide {
+  display: none;
+}
+.midle {
+    padding-top: 10px;
+}
+#add-prod {
+    margin: auto;
+    padding-top: 20%;
+    padding-left: 5%;
+}
