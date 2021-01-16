@@ -1,0 +1,68 @@
+@mixin disp {
+    display: flex;
+    flex-direction: row;
+}
+@mixin pad {
+    padding: 10px;
+}
+body {
+    div {
+        background-color: rgb(110, 248, 163);
+        width: 100%;
+        height: 100%;
+        nav {
+            background-color: rgb(40, 236, 115);
+            @include disp();
+            justify-content: space-between;
+            padding: 0px 5px 0px 5px;
+            h6 {
+                margin: 15px 5px 0px 5px;
+            }
+        }
+    }
+    div {
+        div {
+            margin-left: 160px;
+            table {
+                background-color: rgb(221, 254, 255);
+                border-color: black;
+                border-style: solid;
+            }
+            p {
+                background-color: rgb(255, 255, 190);
+                width: fit-content;
+                border-radius: 5px;
+                padding: 2px;
+                margin-left: 20%;
+            }
+            h6 {
+                color: gray;
+            }
+        }
+    }
+}    
+.hide {
+    display: none;
+}
+.disp {
+    @include disp();
+    @include pad();
+}
+.borders {
+    border-color: black;
+    border-style: solid;
+    width: fit-content;
+}
+.borders2 {
+    border-color: black;
+    border-style: solid;
+    width: 60%;
+}
+.pad {
+    width: fit-content;
+    height: fit-content;
+    vertical-align: middle;
+    margin: 5px;
+    font-size: small;
+    border-radius: 15px;
+}
