@@ -1,14 +1,6 @@
-function stuff(id, producto, precio, cantidad, stock) {
-    this.id = id;
-    this.producto = producto;
-    this.precio = precio;
-    this.cantidad = cantidad;
-    this.stock = stock;
-}
-let lista = [];
-let co = 0;
-let precioFinal = 0;
-let head = ["Codigo", "Producto", "Precio", "Cantidad", "Stock", " "];
+// HEADER DE LA TABLA DE PRODUCTOS
+let head = ["Producto", "Precio", "Cantidad", "Stock", " "];
+// SE AGREGAN CLASES 
 content.classList.add("disp");
 vaciar.classList.add("pad")
 // CAMBIA EL CARRITO DEPENDIENDO SI ESTA LLENO O VACIO
@@ -24,7 +16,7 @@ let cartel = () => {
 // HEADER DE LA TABLA DE PRODUCTOS
 let header = () => {
     let row = document.createElement('tr');
-    for (let u = 0; u < 5; u++) {
+    for (let u = 0; u < 4; u++) {
         let th = document.createElement("th");
         th.innerText = head[u];
         th.classList.add("borders")
@@ -42,24 +34,29 @@ let muestra = (listaProd) => {
     btn.innerText = "Agregar";
     celdaBoton.appendChild(btn);
     let a = " ";
-    for (i in listaProd) {
+    for (i in currentList) {
         let celda = document.createElement('td');
-        celda.innerText = listaProd[i];
-        row.appendChild(celda);
-        row.appendChild(celdaBoton);
-        celda.classList.add("borders");
-        if (listaProd.stock == 0) {
-            btn.disabled = true;
+        celda.innerText = currentList[i];
+        if (celda.innerText !== currentList.id) {
+            row.appendChild(celda);
+            row.appendChild(celdaBoton);
+            celda.classList.add("borders");
+            if (listaProd.stock == 0) {
+                btn.disabled = true;
+            }
         }
     }
     btn.addEventListener('click', () => {
         buton1(listaProd, a, currentList, btn);
-        p.innerHTML = `Total a pagar: $ ${precioFinal}.`;
+        btnEventListener(p, precioFinal, btn, compras, listaProd)
         cartel(); 
-        btn.classList.add("hide");
-        compras.push(listaProd);
     });
     return row
+}
+let btnEventListener = (a, b, c, d, e) => {
+    a.innerHTML = `Total a pagar: $ ${b}.`;
+    c.classList.add("hide");
+    d.push(e);
 }
 // SE AGREGAN LAS FILAS AL BODY DE LA TABLA
 let show = (listaProd) => {
@@ -111,16 +108,6 @@ let modifications = (a, b, c, d, e, f, g, h) => {
     e.innerText = `Cantidad: ${h}`
     f.innerText = "Quitar";
     f.classList.add("pad");
-}
-// ARREGLO DE LOS ELEMENTOS COMPRADOS
-let compras = [];
-// BASE PARA ASIGNAR LOS ELEMENTOS DEL CARRITO Y AGREGARLO AL ARRAY DE COMPRAS.
-let prodEditado = {
-    id: "",
-    producto: "",
-    precio: "",
-    cantidad: "",
-    stock: "",
 }
 // FILAS DE LA TABLA DE PRODUCTOS DEL CARRITO
 let muestra1 = (l, but) => {
@@ -199,16 +186,11 @@ let show1 = (l, cu, but) => {
     p.innerHTML = `Total a pagar: $ ${precioFinal}.`;
 }
 // FUNCIONES DEL BOTON QUITAR
-// SE RESTA EL TOTAL DEL PRECIO FINAL
+// SE RESTA EL TOTAL DEL PRECIO FINAL Y SE ELIMINA LA FILA DE LA COLUMNA DEL CARRITO
 let buton2 = (p, i, ñ) => {
-    show2(p);
+    coTbody.removeChild(p);
     lista.pop()
     precioFinal = precioFinal - (parseInt(i) * ñ);
-    // comprarBoton();
-}
-// SE ELIMINA LA FILA DE LA COLUMNA DEL CARRITO
-let show2 = (o) => {
-    coTbody.removeChild(o);
 }
 // LISTENER DEL CARRITO, EN DONDE PUEDO OCULTAR O HACER APARECER LOS DATOS DE LOS ELEMENTOS DEL CARRITO
 let boe = (q, a, b, c) => {
@@ -218,7 +200,6 @@ let boe = (q, a, b, c) => {
         c.classList.toggle("hide");
     })
 }
-
 window.addEventListener('load', () => {
     getProd();
     boe(img1, buy, carrito, vaciar);
