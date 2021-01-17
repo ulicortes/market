@@ -13,6 +13,30 @@ let p = document.getElementById('precio-a-pagar');
 let carrito = document.getElementById('carrito');
 let vaciar = document.getElementById('botoncomprar');
 let personal = document.getElementById('personal')
+// CREACION DEL OBJETO, PARA LUEGO TRABAJARLO CON EL CARRITO Y USAR EL EDITPROD()
+function stuff(id, producto, precio, cantidad, stock) {
+  this.id = id;
+  this.producto = producto;
+  this.precio = precio;
+  this.cantidad = cantidad;
+  this.stock = stock;
+}
+// CUANDO ESTA LISTA TIENE UN ELEMENTO, EL CARRITO CAMBIA DE VACIO A LLENO Y VICEVERSA
+let lista = [];
+// CUANDO ESTE CONTADOR LLEGA A UNA CANTIDAD INDICADA, HABILITA EL BOTON DE VACIAR CARRITO
+let co = 0;
+// CONTADOR UTILIZADO PARA LLEVAR LA CUENTA DE LO QUE SE VA A COMPRAR
+let precioFinal = 0;
+// ARREGLO DE LOS ELEMENTOS COMPRADOS
+let compras = [];
+// BASE PARA ASIGNAR LOS ELEMENTOS DEL CARRITO Y AGREGARLO AL ARRAY DE COMPRAS.
+let prodEditado = {
+    id: "",
+    producto: "",
+    precio: "",
+    cantidad: "",
+    stock: "",
+}
 ////////////////////////////////////////////////////////////
 // GETTERS DE LA PAGINA PERSONAL
 let content1 = document.getElementById('content1');
@@ -25,8 +49,6 @@ let contraseña = document.getElementById('contraseña');
 let logear = document.getElementById('log');
 let ing = document.getElementById('ingreso');
 let nuevo = document.getElementById('new');
-// let editar = document.getElementById('edi');
-// let borrar = document.getElementById('bor');
 let cerrar = document.getElementById('close');
 let divAdd = document.getElementById('add-prod')
 let code = document.getElementById('codigo');
@@ -36,8 +58,7 @@ let cuantity = document.getElementById('cantidad');
 let stock = document.getElementById('stock');
 let send = document.getElementById('enviar');
 let back = document.getElementById('back');
-
-// FETCH PARA OBTENER LOS PRODUCTOS DE UNA API
+// FETCH PARA OBTENER LOS PRODUCTOS DE LA API
 let getProd = () => {
     fetch("https://5fe7a5b2010a670017803bd3.mockapi.io/market")
     .then((res) => res.json().then((items) => (listaProd = items))
@@ -46,6 +67,7 @@ let getProd = () => {
         show(listaProd);
     }))
 }
+// FETCH PARA OBTENER LOS PRODUCTOS DE LA API EN EL APARTADO PARA EL PERSONAL
 let getProd1 = () => {
     fetch("https://5fe7a5b2010a670017803bd3.mockapi.io/market")
     .then((res) => res.json().then((items) => (listaProd = items))
@@ -55,6 +77,7 @@ let getProd1 = () => {
         show1(listaProd);
     }))
 }
+// FETCH PARA EDITAR EL STOCK DESPUES DE QUE SE HACE LA COMPRA
 let editProd = (idprod, modprod) => {
     fetch(`https://5fe7a5b2010a670017803bd3.mockapi.io/market/${idprod}`, {
       method: "PUT",
@@ -72,6 +95,7 @@ let editProd = (idprod, modprod) => {
         };
     })
 };
+// FETCH PARA AÑADIR UN NUEVO PRODUCTO EN EL APARTADO PARA EL PERSONAL
 let add = (nuevo) => {
     fetch("https://5fe7a5b2010a670017803bd3.mockapi.io/market", {
       method: "POST",
@@ -84,6 +108,7 @@ let add = (nuevo) => {
     })
     .catch((error) => console(error));
 };
+// FETCH PARA BORRAR UN PRODUCTO DE LA LISTA EN EL APARTADO PARA EL PERSONAL
 let deleteP = (id) => {
     fetch(`https://5fe7a5b2010a670017803bd3.mockapi.io/market/${id}`, {
       method: "DELETE",
